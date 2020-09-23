@@ -9,7 +9,7 @@ import SpinnerRectangleBounce from '../UI/SpinnerRectangleBounce'
 class PlanetsListTable extends Component {
   componentDidMount() {
     new Promise((resolve, reject) => {
-      Utils.getPlanets('https://swapi.co/api/planets', [], resolve, reject)
+      Utils.getPlanets('https://swapi.dev/api/planets/', [], resolve, reject)
     })
       .then(response => {
         this.props.loadPlanetsSuccess(response)
